@@ -4,3 +4,31 @@
   min-height: general-sprite-height($name) * $multiplier;
   min-width: general-sprite-width($name) * $multiplier;
 }
+
+// Sprites
+// Note limits in Safari iOS: http://www.williammalone.com/articles/html5-javascript-ios-maximum-image-size/
+$common-layout: smart;
+$common-sprite-dimensions: true;
+@import "sprites/common/*.png";
+
+$common-retina-layout: smart;
+$common-retina-sprite-dimensions: false;
+@import "sprites/common-retina/*.png";
+
+
+// Deals with retina and normal sprites
+@mixin sprite-magic($sprite-name, $retina: true, $normal-sprite-map: $common-sprites, $retina-sprite-map: $common-retina-sprites){
+  background-image: image-url(sprite-path($normal-sprite-map));
+  background-position: sprite-position($normal-sprite-map, $sprite-name);
+  width: image-width(sprite-file($normal-sprite-map, $sprite-name));
+  height: image-height(sprite-file($normal-sprite-map, $sprite-name));
+  background-repeat: no-repeat;
+
+  @if $retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
+      background-position: sprite-position($retina-sprite-map, $sprite-name);
+      background-image: image-url(sprite-path($retina-sprite-map));
+      background-size: image-width(sprite-path($retina-sprite-map)) / 2 image-height(sprite-path($retina-sprite-map)) / 2;
+    }
+  }
+}
