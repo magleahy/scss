@@ -1,0 +1,6 @@
+// Used by the parent for dimensions e.g. parent-element:before is the sprite holder, parent-element is the parent
+// Takes in a sprite map, name of section of sprite and multiplier for scaling purposes
+@mixin spriter-holder($name, $multiplier: 1) {
+  min-height: general-sprite-height($name) * $multiplier;
+  min-width: general-sprite-width($name) * $multiplier;
+}
