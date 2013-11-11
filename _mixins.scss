@@ -26,7 +26,7 @@ $common-retina-sprite-dimensions: false;
 
   @if $retina {
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
-      background-position: nth(sprite-position($retina-sprite-map, $sprite-name), 1)/2 nth(sprite-position($retina-sprite-map, $sprite-name), 2)/2;
+      background-position: nth(sprite-position($retina-sprite-map, $sprite-name), 1) / 2 nth(sprite-position($retina-sprite-map, $sprite-name), 2) / 2;
       background-image: image-url(sprite-path($retina-sprite-map));
       background-size: image-width(sprite-path($retina-sprite-map)) / 2 image-height(sprite-path($retina-sprite-map)) / 2;
     }
