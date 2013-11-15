@@ -32,3 +32,13 @@ $common-retina-sprite-dimensions: false;
     }
   }
 }
+
+// If you want to position a background image in the centre of it's parent
+@mixin sprite-background($sprite-name, $retina: true, $normal-sprite-map: $common-sprites, $retina-sprite-map: $common-retina-sprites) {
+  @extend %background-holder;
+  @include sprite-magic($sprite-name, $retina);
+  top: 50%;
+  left: 50%;
+  margin-top: image-height(sprite-file($normal-sprite-map, $sprite-name)) * -0.5;
+  margin-left: image-width(sprite-file($normal-sprite-map, $sprite-name)) * -0.5;
+}
