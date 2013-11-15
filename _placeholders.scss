@@ -1,0 +1,22 @@
+// Placeholders
+%background-holder {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+}
+
+%float-clear {
+  float: left;
+  width: 100%;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%text-indent {
+  text-indent: -99em;
+}
