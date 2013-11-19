@@ -62,3 +62,36 @@ $common-retina-sprite-dimensions: false;
     color: $color;
   }
 }
+
+// Used to make an arrow pointing down at the bottom of an element with a background colour and a border
+// Assumes an element of .arrow
+@mixin arrow ($color-background: #fff, $color-border: #000, $arrow-height: 28px, $arrow-border-width: 6px) {
+  .arrow {
+    position: absolute;
+    bottom: 4px;
+    z-index: 5;
+    width: auto;
+    left: 50%;
+      
+    &:after, &:before {
+      @extend %background-holder;
+      top: 100%;
+      left: 50%;
+      height: 0;
+      width: 0;
+      border: solid transparent;
+    }
+
+    &:after {
+      border-top-color: $color-background;
+      border-width: $arrow-height - $arrow-border-width;
+      margin-left: ($arrow-height - $arrow-border-width) * -1;
+    }
+
+    &:before {
+      border-top-color: $color-border;
+      border-width: $arrow-height;
+      margin-left: $arrow-height * -1;
+    }
+  } ///.arrow
+}
