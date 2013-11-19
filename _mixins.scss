@@ -42,3 +42,23 @@ $common-retina-sprite-dimensions: false;
   margin-top: image-height(sprite-file($normal-sprite-map, $sprite-name)) * -0.5;
   margin-left: image-width(sprite-file($normal-sprite-map, $sprite-name)) * -0.5;
 }
+
+//Placeholder text syling is not yet supported by Compass
+@mixin placeholder($color) { 
+
+  &:-ms-input-placeholder { 
+    color: $color; 
+  }
+  
+  &:-moz-placeholder { //Firefox 18-
+    color: $color; 
+  }
+
+  &::-moz-placeholder { //Firefox 19+
+    color: $color; 
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
