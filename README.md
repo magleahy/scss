@@ -30,7 +30,7 @@ Here's a good example:
 }
 ```
 
-#CSS Rules
+###CSS Rules
 
 - make properties alphabetical within a selector
 - use specific overrides rather than shorthand overrides, avoid repeating code
