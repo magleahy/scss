@@ -12,7 +12,7 @@ BEM can be useful: http://csswizardry.com/2013/01/mindbemding-getting-your-head-
 
 Here's a good example: 
 
-'''
+```
 .block {
     /* CSS declarations for `.block` */
 
@@ -28,7 +28,7 @@ Here's a good example:
         }
     }
 }
-'''
+```
 
 #CSS Rules
 
