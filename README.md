@@ -30,7 +30,15 @@ Here's a good example:
 }
 ```
 
-###CSS Rules
+###SCSS
+
+####Variable Names
+Good article: http://thesassway.com/beginner/variable-naming
+
+#####Default Values
+https://robots.thoughtbot.com/sass-default
+
+####Rules
 
 - make properties alphabetical within a selector
 - use specific overrides rather than shorthand overrides, avoid repeating code
