@@ -41,6 +41,7 @@ https://robots.thoughtbot.com/sass-default
 ####Rules
 
 - make properties alphabetical within a selector
+- add a line before each nested selector
 - use specific overrides rather than shorthand overrides, avoid repeating code
 - do not use elements as part of the selector
 - use rem for fonts
